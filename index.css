@@ -1,0 +1,137 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+.logo-section {
+    margin-bottom: 30px;
+}
+
+.logo-section img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 0.1px solid #000;
+}
+
+.logo-section span {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.search-container input {
+    width: 80%;
+    height: 45px;
+    padding-left: 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-size: 1rem;
+    border: 2px solid #ddd;
+}
+
+.recipe-section h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.recipe-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.card {
+    width: 100%;
+    background-color: #fff;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.card button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: #fa8500;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.card button:hover {
+    background-color: #e67e00;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .search-container input {
+        width: 100%;
+    }
+
+    .recipe-cards {
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .card-body {
+        padding: 15px;
+    }
+
+    .card-title {
+        font-size: 1.1rem;
+    }
+
+    .card button {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-section span {
+        font-size: 2rem;
+    }
+
+    .search-container input {
+        font-size: 0.9rem;
+    }
+}

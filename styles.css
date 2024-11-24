@@ -1,0 +1,28 @@
+/* Styles for the logo container */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 50px; /* Default gap for smaller screens */
+    padding: 10px;
+    background-color: #f4f4f4; /* Light contrast background */
+    border-radius: 5px; /* Rounded corners */
+}
+
+@media (min-width: 768px) {
+    .logo {
+        gap: 100px; /* Adjusted gap for medium screens */
+    }
+}
+
+@media (min-width: 1200px) {
+    .logo {
+        gap: 200px; /* Full gap for large screens */
+    }
+}
+
+/* Logo h1 text */
+.logo h1 {
+    font-size: 18px;
+    text-align: center;
+    margin: 0; /* Removes default h1 margin */
+}

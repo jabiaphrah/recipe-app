@@ -1,0 +1,180 @@
+/* reset and Base styles */
+html,body {
+  padding: 0;
+  margin: 0;
+ font-family:sans-serif;
+}
+
+body {
+  padding: 20px;
+  background-color: #f9f9f9; /*Subtle background for better aesthetics */
+}
+
+/* Recipe Title Styles */
+.recipe-title {
+  display: flex;
+  justify-content: space-between; /* Pushes the Home link to the left and title to the center */
+  align-items: center; /* Centre vertically */
+  width: 100%;
+  margin-bottom: 20px; /* space below the title */
+}
+
+.recipe-title a {
+  margin-left: 0; /* Reset left margin on Home link */
+  font-size: 18px;
+  color: #000;
+  text-decoration: none;
+}
+
+.recipe-title h1 {
+  text-align: center;
+  font-size: 30px;
+  font-family: sans-serif;
+  font-weight: 800;
+  color: #000;
+  flex-grow: 1; /* Ensures that the title takes up all available space */
+}
+/* Recipe Image Styles*/
+.recipe-image {
+  margin-top: 20px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  aspect-ratio: 16/9; /*Ensures responsive image height*/
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 7px;
+  overflow: hidden; /*Ensures image stays within the rounded borders*/
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1); /*Adds a subtle shadow*/
+}
+
+
+.recipe-image img {
+  width: 100%;
+  object-fit: cover; /*Updated for better responsiveness */
+}
+
+/* Ingredients Section */
+.ingredients-section {
+  margin-top: 20px;
+}
+
+.ingredients-section h2 {
+  font-size:1.7rem;
+  font-weight: 800;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.ingredients-section ul {
+  padding-left: 20px; /*ndents list for better readability */
+  line-height: 1.8;
+  list-style: disc;   /* Ensures a clear bullet list */
+}
+
+.ingredients-section ul li {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #555; /* Subtle gray for a softer look */
+}
+
+/* Preparation Section */
+.preparation-section {
+  margin-top: 20px;
+}
+
+.preparation-section h2 {
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.preparation-section ol {
+  padding-left: 20px;
+  line-height: 1.8;
+  list-style-type: decimal; /* Clear numbered list */
+}
+
+.preparation-section ol li {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #555;
+}
+
+/* Share Recipe Button */
+.share-recipe-button {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.share-recipe-button button {
+  padding: 10px 20px; /* Improved spacing for better usability */
+  border-radius: 5px;
+  background-color: #00000093; /* Contrasts better with border */
+  outline: none;
+  border: 1px solid #333; /* Slightly thicker border for better visibility */
+  font-size: 1rem;
+  font-weight: 300;
+  width: 200px;
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.share-recipe-button button:hover {
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+  transform: scale(1.05); /* Subtle scaling effect on hover */
+}
+
+.share-recipe-button button:focus {
+  outline: 2px solid #007BFF; /* Visible focus outline for accessibility */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .recipe-title h1 {
+    font-size: 1.5rem;
+  }
+
+  .recipe-image {
+    aspect-ratio: 4 / 3; /* Adjust aspect ratio for smaller screens */
+  }
+
+  .ingredients-section h2,
+  .preparation-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .ingredients-section ul li,
+  .preparation-section ol li {
+    font-size: 0.9rem;
+  }
+
+  .share-recipe-button button {
+    width: 150px;
+    font-size: 0.9rem;
+  }
+}
+
+.home-link {
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #000;
+  text-decoration: none;
+}
+
+.go-back-btn {
+  font-size: 14px;
+  padding: 8px 15px;
+  border-radius: 5px;
+  background-color: #6c757d; /* Bootstrap secondary color */
+  color: white;
+  text-decoration: none;
+}
