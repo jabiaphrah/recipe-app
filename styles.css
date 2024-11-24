@@ -1,28 +1,142 @@
-/* Styles for the logo container */
-.logo {
+/* Global Reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%; /* 1rem = 10px */
+}
+
+body {
+    padding: 2rem; /* Use rem for consistency */
+    font-family: sans-serif;
+    line-height: 1.6; /* Improve readability */
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Utility Classes */
+.mt-20 {
+    margin-top: 2rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.flex-center {
     display: flex;
     align-items: center;
-    gap: 50px; /* Default gap for smaller screens */
-    padding: 10px;
-    background-color: #f4f4f4; /* Light contrast background */
-    border-radius: 5px; /* Rounded corners */
+    justify-content: center;
 }
 
-@media (min-width: 768px) {
-    .logo {
-        gap: 100px; /* Adjusted gap for medium screens */
+/* Recipe Title */
+.recipe-title {
+    @extend .flex-center;
+    margin-bottom: 2rem;
+}
+
+.recipe-title h1 {
+    margin-left: 2rem;
+    text-transform: capitalize;
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+/* Recipe Image */
+.recipe-image {
+    margin-top: 2rem;
+    aspect-ratio: 16 / 9;
+    border-radius: 0.7rem;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.recipe-image img {
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Ingredients Section */
+.ingredients-section,
+.preparation-section {
+    margin-top: 2rem;
+}
+
+.ingredients-section h2,
+.preparation-section h2 {
+    font-size: 1.7rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.ingredients-section ul,
+.preparation-section ol {
+    padding-left: 2rem;
+    line-height: 1.8;
+}
+
+.ingredients-section ul li,
+.preparation-section ol li {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+/* Share Recipe Button */
+.share-recipe-button {
+    margin-top: 5rem;
+    @extend .flex-center;
+}
+
+.share-recipe-button button {
+    padding: 1rem 1.5rem;
+    width: 20rem;
+    border-radius: 0.5rem;
+    border: 1px solid #333;
+    background-color: #fff;
+    font-size: 1.6rem;
+    font-weight: 300;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.share-recipe-button button:hover {
+    background-color: #333;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+.share-recipe-button button:focus {
+    outline: 0.2rem solid #007BFF;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .recipe-title h1 {
+        font-size: 1.5rem;
     }
-}
 
-@media (min-width: 1200px) {
-    .logo {
-        gap: 200px; /* Full gap for large screens */
+    .recipe-image {
+        aspect-ratio: 4 / 3;
     }
-}
 
-/* Logo h1 text */
-.logo h1 {
-    font-size: 18px;
-    text-align: center;
-    margin: 0; /* Removes default h1 margin */
+    .ingredients-section h2,
+    .preparation-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .ingredients-section ul li,
+    .preparation-section ol li {
+        font-size: 0.9rem;
+    }
+
+    .share-recipe-button button {
+        width: 15rem;
+        font-size: 1.4rem;
+    }
 }
